@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Wine Quality Tester</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <div class="file-input-container">
-                <input type="file" name="file" id="fileInput" accept=".csv">
-                <label for="fileInput">Choose CSV file</label>
-            </div>
-            <button type="submit" id="submitBtn">Predict Quality</button>
-            <div id="loading" class="loading">Processing...</div>
-        </form>
-        <div id="result"></div>
-        <div id="error" class="error"></div>
-    </div>
+    <h1>Wine Quality Tester</h1>
+    <form id="uploadForm" action="http://ec2-3-81-189-24.compute-1.amazonaws.com:5000/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput">
+        <input type="submit" value="Predict Quality">
+    </form>
+    <p id="result"></p>
     <script src="script.js"></script>
 </body>
 </html>

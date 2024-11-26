@@ -3,110 +3,55 @@ body {
     background-color: #eaeaea;
     margin: 0;
     padding: 20px;
-    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    height: 100vh;
     color: #4a4a4a;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 h1 {
     color: #5d1049;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 #uploadForm {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.file-input-container {
-    width: 100%;
-    position: relative;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
 }
 
 #fileInput {
-    opacity: 0;
-    width: 0.1px;
-    height: 0.1px;
-    position: absolute;
-}
-
-.file-input-container label {
-    display: block;
-    padding: 10px;
-    border: 2px dashed #5d1049;
+    border: 2px solid #5d1049;
+    padding: 5px;
     border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.file-input-container label:hover {
-    background-color: #f8f2f6;
-}
-
-button[type="submit"] {
+input[type="submit"] {
     background-color: #5d1049;
     color: white;
-    padding: 12px 24px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 16px;
 }
 
-button[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #812f76;
-}
-
-button[type="submit"]:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
 }
 
 #result {
     display: none;
     margin-top: 20px;
-    padding: 15px;
+    padding: 10px;
     background-color: #dff0d8;
     color: #3c763d;
     border: 1px solid #d6e9c6;
     border-radius: 4px;
+    width: 100%;
     text-align: center;
-}
-
-.error {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f2dede;
-    color: #a94442;
-    border: 1px solid #ebccd1;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.loading {
-    display: none;
-    color: #5d1049;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-.file-name {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #666;
 }
